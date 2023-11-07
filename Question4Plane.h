@@ -1,15 +1,11 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
 #include <random>
 #include "Question3FlightPaths.h"
-#include <map>
 
 using namespace std;
-map<string, map<string, int>> flightDistances = {
-    { "SCE", {{"PHL", 160}, {"ORD", 640}, {"EWR", 220}} }
-};
+
 class Plane {
 protected:
     double wait_time;
@@ -28,16 +24,11 @@ public:
     Plane(const string& from, const string& to) : origin(from), destination(to) {
         pos = 0.0;
         vel = 0.0;
+        distance = 0.0;
         loiter_time = 0.0;
         at_SCE = 0.0;
-        distance = 0.0;
-        //distance = getDistance(from, to);
-        if (flightDistances.count(origin) && flightDistances[origin].count(destination)) {
-            distance = flightDistances[origin][destination];
-        }
     }
-
-    double getDistance(const string& origin, const string& destination) const {
+    int getDistance(const string& origin, const string& destination) const {
         for (const FlightPaths& flight : airports) {
             if (flight.getOrigin() == origin && flight.getDestination() == destination) {
                 return flight.getDistance();
@@ -58,9 +49,6 @@ public:
             else {
                 if (pos < distance) {
                     pos += vel * dt;
-                    if (pos > distance) {
-                        pos = distance;
-                    }
                     at_SCE = 0;
                 }
                 else {
@@ -141,7 +129,7 @@ public:
         return d(gen);
     }
 
-    //~Plane() {}
+    ~Plane() {}
 };
 
 
