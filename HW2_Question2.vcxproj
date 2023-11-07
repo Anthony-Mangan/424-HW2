@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2bb8c11e-a527-46d5-bc2b-bbffd4c39be8}</ProjectGuid>
+    <ProjectGuid>{935f0d64-bdd4-45f2-a399-2966fa01edaf}</ProjectGuid>
     <RootNamespace>HW2Question2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>HW2_Question1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,8 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\HW2_Question1\Question1FlightPaths.h" />
-    <ClInclude Include="Question2Plane.h" />
+    <ClCompile Include="HW2Question1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Question1FlightPaths.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

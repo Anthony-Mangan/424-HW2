@@ -15,10 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Question2Plane.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\HW2_Question1\Question1FlightPaths.h">
+    <ClCompile Include="HW2Question1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Question1FlightPaths.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
