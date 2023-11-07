@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,8 +6,6 @@
 
 using namespace std;
 
-// This class represents the flight path between two different airports, using the origin, destination, and distance as the input parameters.
-// Additionally, it uses getter methods to access the different parameters.
 class FlightPaths {
 public:
     FlightPaths(const string& origin, const string& destination, int distance)
