@@ -138,7 +138,7 @@ int main(int argc, char** argv) {
 
     // Initialize variables to keep track of time and position
     double time = 0;
-    double timestep = 60.0 / 3600;
+    double timestep = 10.0/3600;
     /*
     cout << "Time: " << time << " hours" << endl;
     cout << "AA1 Position: " << aa1.getPos() << " miles" << endl;
@@ -186,7 +186,7 @@ int main(int argc, char** argv) {
         atc.control_traffic();
 
         // Print the position of each airplane
-        /*
+        
         cout << "AA1 Position: " << aa1.getPos() << " miles" << endl;
         cout << "UA1 Position: " << ua1.getPos() << " miles" << endl;
         cout << "UA2 Position: " << ua2.getPos() << " miles" << endl;
@@ -194,11 +194,10 @@ int main(int argc, char** argv) {
         cout << "GA1 Position: " << ga1.getPos() << " miles" << endl;
         cout << "GA2 Position: " << ga2.getPos() << " miles" << endl;
         cout << "GA3 Position: " << ga3.getPos() << " miles" << endl;
-        */
+       
         // Update time
         viz.update(timestep);
         time += timestep;
-        //timestep = static_cast<double>(timestepDistribution(gen));
     
     }
 

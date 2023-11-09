@@ -37,7 +37,7 @@ public:
                 if (i < registered_planes.size()) {
                     for (int i = 0; i < registered_planes.size(); i++) {
                         Plane* current_plane = registered_planes[i];
-                        if (current_plane->getAtSCE() == 0 && distance_to_SCE() < -AIRSPACE_DISTANCE && current_plane->getLoiter_time() == 0) {
+                        if (current_plane->getAtSCE() == 0 && distance_to_SCE() <= AIRSPACE_DISTANCE && current_plane->getLoiter_time() == 0) {
                             current_plane->setLoiter_time(100);
                             i++;
                         }
@@ -49,8 +49,7 @@ public:
     }
 private:
     int calculate_distance(Plane* plane1, Plane* plane2) {
-        // Calculate the distance between two airplanes (you need to implement this)
-        // You can use a formula or method to calculate the distance between them.
-        // Return the distance as an integer.
+        // Calculate the distance between two airplanes 
+     
     }
 };
